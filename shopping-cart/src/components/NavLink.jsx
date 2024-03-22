@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 const NavLink = function({link, name}) {
   return (
-    <div className="p-2 items-center justify-center rounded-lg hover:text-blue-500 transition hover:cursor-pointer">
+    <nav className="p-2 items-center justify-center rounded-lg hover:text-blue-500 transition hover:cursor-pointer">
       <Link to={link} className="">
         {name}
       </Link>
-    </div>
+    </nav>
   )
 }
 

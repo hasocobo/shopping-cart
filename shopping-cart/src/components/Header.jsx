@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
 import Icon from "./Icon"
 import Button from "./Button"
+import SearchBar from "./SearchBar"
+
 
 
 export default function Header() {
@@ -14,6 +16,8 @@ export default function Header() {
             <div className="left">
               <NavLink name={"Home"} link={"/"} />
             </div>
+
+            <SearchBar />
             
             <div className="right flex items-center gap-x-8">
               <NavLink name={"Store"} link={"/"} />

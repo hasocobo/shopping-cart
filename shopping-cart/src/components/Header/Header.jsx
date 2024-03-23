@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
 import NavLink from "./NavLink"
-import Icon from "./Icon"
-import Button from "./Button"
+import Icon from "../Icon"
+import Button from "../Button"
 import SearchBar from "./SearchBar"
 
 
 
 export default function Header() {
   return (
-    <div className="sticky w-full bg-white-100 border-b font-semibold text-sm shadow">
+    <div className="sticky w-full bg-white bg-opacity-95 border-b font-semibold text-sm">
       <div className="max-w-7xl mx-auto">
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">

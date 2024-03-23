@@ -20,7 +20,7 @@ export default function Header() {
             <SearchBar />
             
             <div className="right flex items-center gap-x-8">
-              <NavLink name={"Store"} link={"/"} />
+              <NavLink name={"Store"} link={"/store"} />
               <Button name={"See More"}/>
               <Icon link={"/"} name={"shopping_cart"}/>
             </div>

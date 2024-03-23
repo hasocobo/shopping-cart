@@ -17,7 +17,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
  .bg-image {
   background-image:url('./assets/images/pexels-sound-on-3394666.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 10% 80%;
   background-repeat: no-repeat;
  }
 

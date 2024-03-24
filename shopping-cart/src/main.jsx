@@ -31,7 +31,7 @@ const Root = () => {
       children: [
         {
           path: "",
-          element: <Homepage text={"Your headphone store"} />
+          element: <Homepage text={"Your general store"} />
 
         },
         {
@@ -40,7 +40,7 @@ const Root = () => {
         },
         {
           path: "store/:itemId",
-          element: <ItemView item={data} />
+          element: <ItemView items={data} />
         }
       ]
     },

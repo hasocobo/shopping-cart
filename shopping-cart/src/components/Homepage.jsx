@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 export default function Homepage({ text }) {
   return (
-    <div className="w-full flex h-full justify-center bg-image">
+    <div className="w-full flex h-full justify-center">
       <div className="mt-60 mr-10 flex flex-col items-center ">
         <h1 className="letter-animation text-zinc-700 font-bold text-5xl">
           {text}

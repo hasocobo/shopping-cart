@@ -15,7 +15,7 @@ export default function Store({ data }) {
       </h1>
       <div id="store">
         {data.map((item, index) => (
-          <Item name={item.title} key={index} price={item.price+"$"} link={`/store/${index}`} image={item.image}> </Item>
+          <Item name={item.title} key={item.id} price={item.price+"$"} link={`/store/${item.id}`} image={item.image}> </Item>
         ))}
       </div>
     </div>

@@ -48,6 +48,8 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
  }
 
  img {
+  background-color: white;
   height: 100%;
-  width: 100%;
+  min-width: 100%;
+  object-fit: contain;
  }

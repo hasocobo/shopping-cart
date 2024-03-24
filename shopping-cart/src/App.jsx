@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-neutral-50 h-dvh min-h-dvh'>
+      <div className='h-dvh min-h-dvh'>
         <header className=''>
           <Header />
         </header>

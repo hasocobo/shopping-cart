@@ -41,3 +41,13 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   }
  }
  
+ #store {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+ }
+
+ img {
+  height: 100%;
+  width: 100%;
+ }

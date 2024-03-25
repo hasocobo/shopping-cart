@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import Item from "../Item/Item"
 
 
-export default function ItemView({ items }) {
+export default function ItemView({ items, onClick }) {
   let { itemId } = useParams();
   const Item = items.find((element) => element.id == itemId);
   return (
@@ -13,10 +13,11 @@ export default function ItemView({ items }) {
         </div>
         <div className="info-container w-3/5 h-full p-20">
           <div className="item-info flex flex-col items-center justify-center">
-            <h1 className="text-bold text-3xl my-4 text-stone-700 p-4 bg-white rounded-md shadow">{Item.title}</h1>
-            <div className="item-price flex justify-between bg-white rounded-md shadow">
+            <h1 className="text-bold text-3xl text-stone-700 p-4 bg-white border-b shadow self-start">{Item.title}</h1>
+            <p className="mb-4 text-stone-500 p-4 bg-white shadow">{Item.description}</p>
+            <div className="item-price flex justify-between bg-white rounded-md shadow self-start">
               <h1 className="text-bold text-3xl text-amber-500 text-center border-r p-4">{Item.price}$</h1>
-              <button className="p-4"> Add to Cart</button>
+              <button onClick={() => onClick(Item)} className="p-4"> Add to Cart</button>
             </div>
           </div>
         </div>

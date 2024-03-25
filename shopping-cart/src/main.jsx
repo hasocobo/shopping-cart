@@ -14,6 +14,7 @@ import {
 
 const Root = () => {
   const [data, setData] = useState([]);
+  const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
     (async function getItems() {
@@ -23,10 +24,15 @@ const Root = () => {
     })();
   }, [])
 
+  const handleClick = (Item) => {
+    setItemList([...itemList, Item]);
+  }
+  console.log(itemList);
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <App itemCount={itemList.length}/>,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -40,7 +46,7 @@ const Root = () => {
         },
         {
           path: "store/:itemId",
-          element: <ItemView items={data} />
+          element: <ItemView items={data} onClick={handleClick}/>
         }
       ]
     },

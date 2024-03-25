@@ -3,13 +3,13 @@ import Header from './components/Header/Header'
 import Homepage from './components/Homepage'
 import { Outlet } from 'react-router-dom'
 
-function App() {
+function App({ itemCount }) {
 
   return (
     <>
       <div className='h-dvh min-h-dvh'>
         <header className=''>
-          <Header />
+          <Header itemCount={itemCount} />
         </header>
         <main className='text-neutral-200 h-full'>
           <Outlet />

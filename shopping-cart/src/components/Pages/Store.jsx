@@ -9,7 +9,7 @@ import { useState } from "react"
 export default function Store({ data }) {
 
   return (
-    <div className="max-w-6xl py-4 mx-auto">
+    <div className="max-w-6xl py-4 mx-auto px-2">
       <h1 className="text-2xl mb-8 font-bold">
         Items
       </h1>

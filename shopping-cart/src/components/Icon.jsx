@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
-export default function Icon({ name, link }) {
+export default function Icon({ name }) {
   return (
-    <div className="material-icons flex items-center justify-center icon">
-      <Link to={link} className="icon">
+    <div className="material-icons flex items-center justify-center icon cursor-pointer">
+      <div className="icon">
         {name}
-      </Link>
+      </div>
     </div>
   )
 }

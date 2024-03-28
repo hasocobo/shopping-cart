@@ -32,7 +32,7 @@ const Root = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <App itemCount={itemList.length}/>,
+      element: <App itemCount={itemList.length} cartItems={itemList}/>,
       errorElement: <ErrorPage />,
       children: [
         {

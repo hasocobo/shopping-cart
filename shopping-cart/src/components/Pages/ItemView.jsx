@@ -6,7 +6,7 @@ export default function ItemView({ items, onClick }) {
   let { itemId } = useParams();
   const Item = items.find((element) => element.id == itemId);
   return (
-    <div className="max-w-6xl mx-auto py-20 h-[800px] ">
+    <div className="max-w-6xl mx-auto py-20 h-[800px] overflow-y-hidden">
       <div className="container bg-stone-50 h-full flex rounded-lg shadow-lg">
         <div className="image w-2/5 border-r bg-white">
           <img src={Item.image} alt={Item.title} />

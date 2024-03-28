@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar"
 
 
 
-export default function Header({ itemCount=0 }) {
+export default function Header({ itemCount=0, handleClick }) {
   return (
     <div className="sticky w-full bg-white bg-opacity-95 border-b font-semibold text-sm">
       <div className="max-w-7xl mx-auto">
@@ -19,10 +19,10 @@ export default function Header({ itemCount=0 }) {
 
             <SearchBar />
 
-            <div className="right flex items-center gap-x-8">
+            <div className="right hidden sm:flex items-center gap-x-8 ">
               <NavLink name={"Store"} link={"/store"} />
-              <Button name={"See More"} />
-              <div className="shopping-cart-icon">
+              <Button name={"See More"} link={"/store"} />
+              <div className="shopping-cart-icon" onClick={handleClick}>
                 <Icon link={"/"} name={"shopping_cart"} />
                 <div className="item-count flex justify-center items-center">
                   <div>{itemCount}</div>

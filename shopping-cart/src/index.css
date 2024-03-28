@@ -119,3 +119,34 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   right: -35%;
   position: absolute;
  }
+
+ .check-out-bar {
+  transform-origin: right;
+  transition: .5s;
+ }
+
+ .open {
+  animation: slideInBar .2s forwards ease-in;
+}
+
+.closed {
+  animation: slideOutBar .2s forwards ease-in;
+}
+
+ @keyframes slideInBar {
+  from {
+    transform: translateX(101%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+ }
+
+@keyframes slideOutBar {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(101%);
+  }
+}

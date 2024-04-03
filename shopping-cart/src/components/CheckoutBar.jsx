@@ -5,9 +5,10 @@ import Icon from "./Icon";
 import CheckoutBarItem from "./Item/CheckoutBarItem";
 
 
-export default function CheckoutBar({ isOpen, handleClick, items }) {
+export default function CheckoutBar({ isOpen, handleClick, items, onRemove }) {
   const [closed, setIsClosed] = useState(true);
   const price = items.reduce((price, item) => price + item.price, 0).toFixed(2);
+
 
   useEffect(() => {
     if (!isOpen) {
@@ -40,13 +41,25 @@ export default function CheckoutBar({ isOpen, handleClick, items }) {
           <div className="items flex flex-col gap-4">
             {items.length !== 0
               ? items.map((item, index) =>
-                (<CheckoutBarItem image={item.image} price={item.price} name={item.title} key={index + item.id} />))
+                (<CheckoutBarItem item={item} key={index + item.id} onRemove={onRemove} />))
               : ""}
           </div>
-          <div className="bottom flex justify-center items-center gap-8">
-            <div className="price font-bold">Total Price: ${price}</div>
-            <Button name={"Go to check-out"}/>
-          </div>
+
+          {items.length === 0 
+            ?
+            <div className="flex justify-center items-center font-bold">
+              Nothing to see here...
+            </div>
+            :
+            <div className="bottom flex justify-center items-center gap-8">
+              <div className="flex gap-2">
+                <span className="price font-bold">Total Price:  </span>
+                <span className="price font-bold text-amber-800"> ${price}</span>
+              </div>
+              <Button name={"Go to check-out"} />
+            </div>
+            
+          }
         </div>
       </div>
     </dialog>

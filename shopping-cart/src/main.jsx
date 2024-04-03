@@ -24,15 +24,19 @@ const Root = () => {
     })();
   }, [])
 
-  const handleClick = (Item) => {
-    setItemList([...itemList, Item]);
+  const addItem = (item) => {
+    setItemList([...itemList, item]);
+  }
+
+  const removeItem = (item) => {
+    setItemList(itemList.filter(listItem => listItem.title !== item.title));
   }
   console.log(itemList);
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <App itemCount={itemList.length} cartItems={itemList}/>,
+      element: <App itemCount={itemList.length} cartItems={itemList} onRemove={removeItem}/>,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -46,7 +50,7 @@ const Root = () => {
         },
         {
           path: "store/:itemId",
-          element: <ItemView items={data} onClick={handleClick}/>
+          element: <ItemView items={data} onClick={addItem}/>
         }
       ]
     },

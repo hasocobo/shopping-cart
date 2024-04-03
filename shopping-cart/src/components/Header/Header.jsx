@@ -8,7 +8,7 @@ import SearchBar from "./SearchBar"
 
 export default function Header({ itemCount=0, handleClick }) {
   return (
-    <div className="sticky w-full bg-white bg-opacity-95 border-b font-semibold text-sm">
+    <div className="sticky w-full bg-white border-b font-semibold text-sm">
       <div className="max-w-7xl mx-auto">
         <div className="px-4 py-4">
           <div className="flex justify-between items-center">

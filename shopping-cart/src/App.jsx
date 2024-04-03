@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 
 
 
-function App({ itemCount, cartItems }) {
+function App({ itemCount, cartItems, onRemove }) {
   //dialog state
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,13 +18,13 @@ function App({ itemCount, cartItems }) {
   return (
     <div className='relative w-full'>
       <div className='h-dvh min-h-dvh z-10 w-full relative'>
-        <header className='sticky'>
+        <header className='fixed w-full top-0'>
           <Header itemCount={itemCount} handleClick={handleIsOpen} />
         </header>
         <main className='text-neutral-200 h-full'>
           <Outlet />
         </main>
-        <CheckoutBar isOpen={isOpen} handleClick={handleIsOpen} items={cartItems} />
+        <CheckoutBar isOpen={isOpen} handleClick={handleIsOpen} items={cartItems} onRemove={onRemove} />
       </div>
     </div>
   )
